@@ -1,0 +1,227 @@
+@import "tailwindcss";
+
+/* Custom utility classes for your brand */
+@theme {
+  /* Custom theme values if needed */
+}
+
+/* Base styles */
+@layer base {
+  body {
+    background-color: white;
+    color: #111827;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+/* Custom utility classes */
+@layer components {
+  .container-custom {
+    max-width: 80rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  /* Primary Button - Blue */
+  .btn-primary {
+    background-color: #2563eb;
+    color: white;
+    font-weight: 600;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    border-radius: 0.5rem;
+    transition-property: all;
+    transition-duration: 200ms;
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
+  }
+  .btn-primary:hover {
+    background-color: #1d4ed8;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    transform: scale(1.02);
+  }
+  .btn-primary:active {
+    transform: scale(0.98);
+  }
+
+  /* Secondary Button - White with Blue Border */
+  .btn-secondary {
+    background-color: white;
+    color: #2563eb;
+    font-weight: 600;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    border-radius: 0.5rem;
+    border: 2px solid #2563eb;
+    transition-property: all;
+    transition-duration: 200ms;
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
+  }
+  .btn-secondary:hover {
+    background-color: #f9fafb;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    transform: scale(1.02);
+  }
+  .btn-secondary:active {
+    transform: scale(0.98);
+  }
+
+  /* Outline Button */
+  .btn-outline {
+    background-color: transparent;
+    color: #2563eb;
+    font-weight: 600;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    border-radius: 0.5rem;
+    border: 1px solid #2563eb;
+    transition-property: all;
+    transition-duration: 200ms;
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
+  }
+  .btn-outline:hover {
+    background-color: #eff6ff;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Card Component */
+  .card {
+    background-color: white;
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition-property: box-shadow, transform;
+    transition-duration: 300ms;
+  }
+  .card:hover {
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+  }
+
+  /* Gradient Heading */
+  .heading-gradient {
+    background-image: linear-gradient(to right, #2563eb, #60a5fa);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Section Title */
+  .section-title {
+    font-size: 1.875rem;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 1rem;
+  }
+
+  /* Section Subtitle */
+  .section-subtitle {
+    font-size: 1.125rem;
+    color: #6b7280;
+    max-width: 42rem;
+  }
+
+  /* Badge */
+  .badge {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    font-weight: 600;
+  }
+  .badge-blue {
+    background-color: #dbeafe;
+    color: #1d4ed8;
+  }
+  .badge-red {
+    background-color: #fee2e2;
+    color: #dc2626;
+  }
+  .badge-green {
+    background-color: #d1fae5;
+    color: #059669;
+  }
+  .badge-yellow {
+    background-color: #fef3c7;
+    color: #d97706;
+  }
+}
+
+/* Responsive overrides */
+@media (min-width: 480px) {
+  .xs\:inline {
+    display: inline !important;
+  }
+  .xs\:block {
+    display: block !important;
+  }
+}
+
+@media (min-width: 640px) {
+  .container-custom {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+  .section-title {
+    font-size: 2.25rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container-custom {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+  .section-title {
+    font-size: 2.5rem;
+  }
+}
+
+/* Custom scrollbar styling */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background-color: #f3f4f6;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #3b82f6;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: #2563eb;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Focus states for accessibility */
+*:focus-visible {
+  outline: 2px solid #2563eb;
+  outline-offset: 2px;
+}
+
+/* Utility to hide scrollbar but keep functionality */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
