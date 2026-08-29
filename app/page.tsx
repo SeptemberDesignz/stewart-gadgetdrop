@@ -9,7 +9,7 @@ export default function Home() {
           <div className="flex flex-col items-center text-center">
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-6 leading-tight">
               YOUR NEXT GADGET
-              <span className="block heading-gradient">STARTS HERE</span>
+              <span className="block heading-gradient">STARTS HERE </span>
             </h1>
             <p className="text-lg md:text-xl text-gray-600 max-w-3xl mb-10">
               Stewart Gadgetdrop — Your trusted destination for premium phones, 
